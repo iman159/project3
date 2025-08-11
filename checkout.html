@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkout.css" />
+    <title>MY CHECKOUT</title>
+  </head>
+<body>
+    <!-- Top Green Bar -->
+    <div class="top-bar">
+      <div class="top-left"><i class="phone-number"></i> + 1235 2355 98</div>
+      <div class="top-center"><i class="email"></i> YOUREMAIL@EMAIL.COM</div>
+      <div class="top-right">3–5 BUSINESS DAYS DELIVERY & FREE RETURNS</div>
+    </div>
+
+    <!-- Main Navbar -->
+    <header class="navbar">
+      <div class="logo">VEGEFOODS</div>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <div class="dropdown">
+          <a href="shop.html">SHOP <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <a href="about.html">ABOUT</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="#" class="cart-icon"
+          ><i class="fas fa-shopping-cart"></i> [0]</a
+        >
+      </nav>
+      </header>
+       <!------SECTION2------->
+    <section class="hero">
+      <div class="content">
+        <h4>HOME CHECKOUT</h4>
+        <h1>MY CHECKOUT</h1>
+      </div>
+    </section>
+ 
+    <!--section-2-->
+    <div class="container">
+        <!-- Billing Details Section -->
+        <div class="billing-section">
+            <h2 class="section-title">Billing Details</h2>
+            
+            <form id="billingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-input" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-input" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">State / Country</label>
+                    <select class="form-select" id="country" required>
+                        <option value="france" selected>France</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="germany">Germany</option>
+                        <option value="spain">Spain</option>
+                        <option value="italy">Italy</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Street Address</label>
+                    <div class="address-row">
+                        <input type="text" class="form-input" placeholder="House number and street name" id="address1" required>
+                        <input type="text" class="form-input" placeholder="Apartment, suite, unit etc. (optional)" id="address2">
+                    </div>
+                </div>
+
+                <div class="city-postal-row">
+                    <div class="form-group">
+                        <label class="form-label">Town / City</label>
+                        <input type="text" class="form-input" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required">Postcode / ZIP</label>
+                        <input type="text" class="form-input" id="postcode" required>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-input" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" id="email" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="createAccount">
+                        <label for="createAccount">Create an Account?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="shipToDifferent">
+                        <label for="shipToDifferent">Ship to different address</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Column - Cart Total & Payment -->
+        <div class="right-column">
+            <!-- Cart Total Section -->
+            <div class="cart-section">
+                <h3 class="cart-title">Cart Total</h3>
+                
+                <div class="total-row">
+                    <span class="total-label">Subtotal</span>
+                    <span class="total-value">$20.60</span>
+                </div>
+                
+                <div class="total-row">
+                    <span class="total-label">Delivery</span>
+                    <span class="total-value">$0.00</span>
+                </div>
+                
+                <div class="total-row">
+                    <span class="total-label">Discount</span>
+                    <span class="total-value">$3.00</span>
+                </div>
+                
+                <div class="total-row">
+                    <span class="total-label">TOTAL</span>
+                    <span class="total-value">$17.60</span>
+                </div>
+            </div>
+
+            <!-- Payment Method Section -->
+            <div class="payment-section">
+                <h3 class="payment-title">Payment Method</h3>
+                
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                        <label for="bankTransfer">Direct Bank Transfer</label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="checkPayment" name="paymentMethod" value="checkPayment">
+                        <label for="checkPayment">Check Payment</label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                        <label for="paypal">Paypal</label>
+                    </div>
+                </div>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">I have read and accept the terms and conditions</label>
+                </div>
+
+                <button type="button" class="place-order-btn" id="placeOrderBtn" onclick="placeOrder()">
+                    Place an order
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<!--section-3-->
+<section class="newsletter-section">
+        <div class="newsletter-text">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Get e-mail updates about our latest shops and special offers</p>
+        </div>
+
+  <form action="#" method="post" class="newsletter-form">
+    <input type="email" placeholder="Enter email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+</section>
+  <!-------SECTION4--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column company">
+      <h2 class="logo"><span style="color:#3f51b5">Vegefoods</span></h2>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Help</h3>
+      <ul>
+        <li><a href="#">Shipping Information</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Have a Questions?</h3>
+      <ul class="contact-info">
+        <li><i class="fas fa-map-marker-alt"></i> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+        <li><i class="fas fa-phone"></i> +2 392 3929 210</li>
+        <li><i class="fas fa-envelope"></i> info@yourdomain.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright ©2025 All rights reserved | This template is made with <i class="fas fa-heart"></i> by <span style="color:#91c43f">Colorlib</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
+        
+
+    
